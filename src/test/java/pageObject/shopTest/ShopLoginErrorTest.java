@@ -38,9 +38,7 @@ public class ShopLoginErrorTest extends Hook {
         boolean findUrl = util.getUrl(urlLogin);
         Assert.assertTrue(findUrl);
 
-
-
-        //escriba un correo electrónico falso y haga clic en el siguiente fondo
+        //escriba un correo electrónico valido y haga clic en el siguiente fondo
         LoginPage.sendKeysError();
         LoginPage.submitNextBtn();
 

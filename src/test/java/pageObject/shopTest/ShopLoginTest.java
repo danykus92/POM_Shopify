@@ -45,7 +45,7 @@ public class ShopLoginTest extends Hook {
 
 
         //Compruebe que el error está desplegado
-        boolean exist = LoginPage.messageErrorDisplayed();
+        boolean exist = LoginPage.messageOkDisplayed();
         Assert.assertTrue(exist);
 
 

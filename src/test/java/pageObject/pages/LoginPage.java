@@ -22,6 +22,8 @@ public class LoginPage {
     String nextXpath="//button[@name='commit']";
     String messCss =".validation-error__message";
 
+    String messCssOk =".ui-subheading";
+
     public LoginPage(WebDriver remoteDriver){
         driver = remoteDriver;
     }
@@ -44,6 +46,15 @@ public class LoginPage {
     public boolean messageErrorDisplayed(){
         WebElement message = driver.findElement(By.cssSelector(messCss));
         boolean exist = message.isDisplayed();
+        System.out.println("Mensaje de Error:-- "+message.getText());
         return exist;
+
+    }
+    public boolean messageOkDisplayed(){
+        WebElement message = driver.findElement(By.cssSelector(messCssOk));
+        boolean exist = message.isDisplayed();
+        System.out.println("Login OK:-- "+message.getText());
+        return exist;
+
     }
 }
